@@ -6,7 +6,7 @@ export const StyledInput = styled.input`
     display: block;
     max-width: 350px;
     padding: ${rem(15)};
-    width: calc(100% - ${rem(20)};
+    width: calc(100% - ${rem(20)});
     border: none;
     border-radius: 0;
     background: #f0f0f0;

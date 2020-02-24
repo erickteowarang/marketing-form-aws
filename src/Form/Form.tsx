@@ -2,6 +2,7 @@ import React from 'react'
 import { useFormik } from 'formik'
 
 import TextField from '../components/TextField'
+import FormControl from '../components/FormControl'
 
 import { IFormValues } from './Form.types'
 import { FormWrapper } from './Form.style'
@@ -47,43 +48,49 @@ const SignupForm = () => {
 
   return (
     <FormWrapper onSubmit={formik.handleSubmit}>
-      <TextField 
-        label="First Name"
-        id="firstName"
-        name="firstName"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-      />
-      {formik.touched.firstName && formik.errors.firstName ? (
-        <div>{formik.errors.firstName}</div>
-      ) : null}
+        <FormControl error={
+            formik.touched.firstName && formik.errors.firstName 
+            ? formik.errors.firstName : ''
+        }>
+            <TextField 
+                label="First Name"
+                id="firstName"
+                name="firstName"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.firstName}
+            />
+        </FormControl>
 
-      <TextField 
-        label="Last Name"
-        id="lastName"
-        name="lastName"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-      />
-      {formik.touched.lastName && formik.errors.lastName ? (
-        <div>{formik.errors.lastName}</div>
-      ) : null}
+        <FormControl error={
+            formik.touched.lastName && formik.errors.lastName 
+            ? formik.errors.lastName : ''
+        }>
+            <TextField 
+                label="Last Name"
+                id="lastName"
+                name="lastName"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.lastName}
+            />
+        </FormControl>
 
-      <TextField 
-        label="Email Address"
-        id="email"
-        name="email"
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
-        value={formik.values.firstName}
-      />
-      {formik.touched.email && formik.errors.email ? (
-        <div>{formik.errors.email}</div>
-      ) : null}
+        <FormControl error={
+            formik.touched.email && formik.errors.email 
+            ? formik.errors.email : ''
+        }>
+            <TextField 
+                label="Email Address"
+                id="email"
+                name="email"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+            />
+        </FormControl>
 
-      <button type="submit">Submit</button>
+        <button type="submit">Submit</button>
     </FormWrapper>
   );
 };

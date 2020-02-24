@@ -7,25 +7,29 @@ export const StatusMessage = styled(Label)<{
   status?: 'error' | 'information' | 'warning' | 'success'
 }>`
   display: block;
-  color: ${props =>
-    props.dark ? props.theme.colors.warning : props.theme.colors.error};
 
   ${props =>
     props.status === 'warning' &&
     css`
-      color: ${props.theme.colors.warning};
+      color: yellow
     `};
 
   ${props =>
     props.status === 'success' &&
     css`
-      color: ${props.theme.colors.success};
+      color: green;
+    `};
+
+  ${props =>
+    props.status === 'error' &&
+    css`
+        color: red;
     `};
 
   ${props =>
     props.status === 'information' &&
     css`
-      color: ${props.theme.colors.information};
+      color: black;
     `};
 `
 

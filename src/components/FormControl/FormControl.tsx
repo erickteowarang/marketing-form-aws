@@ -5,11 +5,13 @@ import {
     StatusMessage,
 } from './FormControl.styles'
 
-const FormControl = (
+const FormControl = (props: {
     children: ReactNode | ReactElement | ReactElement[] | any,
     error?: string,
     className?: string
-) => {
+}) => {
+    const { className, error, children } = props
+    
     return (
         <StyledFormControl className={className}>
             {children}
