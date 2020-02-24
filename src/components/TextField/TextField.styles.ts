@@ -7,10 +7,8 @@ export const StyledInput = styled.input`
     max-width: 350px;
     padding: ${rem(15)};
     width: calc(100% - ${rem(20)});
-    border: none;
+    border: 1px solid #808080;
     border-radius: 0;
-    background: #f0f0f0;
-    color: #aaa;
     font-weight: bold;
     -webkit-appearance: none;
 `

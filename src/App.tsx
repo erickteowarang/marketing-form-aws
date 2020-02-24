@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import Form from './Form'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <div className="App">
       <Form />
     </div>
-  );
+  )
 } 
 
-export default App;
+export default App

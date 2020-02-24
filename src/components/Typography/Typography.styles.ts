@@ -72,6 +72,7 @@ export const Label = styled.label<{
   font-size: ${rem(12)};
   line-height: ${rem(20)};
   letter-spacing: 1px;
+  margin-bottom: ${rem(2)};
 `
 
 export const Strikethrough = styled(Text)`

@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
+import React, { FC, Fragment } from 'react'
 
 import { Label } from '../Typography'
 
 import { ITextFieldProps } from './TextField.types'
 import { StyledInput } from './TextField.styles'
 
-const TextField = (props: ITextFieldProps) => {
+const TextField: FC<ITextFieldProps> = (props) => {
     const {
         id,
         name,
@@ -19,7 +19,7 @@ const TextField = (props: ITextFieldProps) => {
 
     return (
         <Fragment>
-            <Label htmlFor={id || name}>{label}</Label>
+            <Label htmlFor={id || name} block={true}>{label}</Label>
             <StyledInput
                 id={id}
                 name={name}

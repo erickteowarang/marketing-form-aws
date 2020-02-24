@@ -7,6 +7,7 @@ export const StatusMessage = styled(Label)<{
   status?: 'error' | 'information' | 'warning' | 'success'
 }>`
   display: block;
+  margin-top: ${rem(2)};
 
   ${props =>
     props.status === 'warning' &&
