@@ -8,6 +8,7 @@ export const H2 = styled.h2`
   font-weight: 300;
   font-size: ${rem(30)};
   line-height: ${rem(40)};
+  margin-bottom: ${rem(20)};
 
   ${minMQ.l`
     font-size: ${rem(40)};
