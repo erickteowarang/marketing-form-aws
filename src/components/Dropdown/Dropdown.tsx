@@ -9,6 +9,7 @@ interface IDropdownProps {
     name: string
     label: string
     className?: string
+    optional?: boolean
     options: Array<{
         value: string,
         label: string,
@@ -26,7 +27,10 @@ const Dropdown: FC<IDropdownProps> = (props) => {
 
     return (
         <Fragment>
-            <Label htmlFor={id || name} block={true}>{label}</Label>
+            <Label htmlFor={id || name} block={true}>
+                {label}
+                {optional && ' - optional'}
+            </Label>
             <StyledSelect
                 id={id}
                 name={name}

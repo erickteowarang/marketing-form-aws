@@ -59,6 +59,7 @@ const SignupForm = () => {
                 label="First Name"
                 id="firstName"
                 name="firstName"
+                optional={true}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
@@ -101,6 +102,7 @@ const SignupForm = () => {
                 id="industry"
                 name="industry"
                 options={INDUSTRY_OPTIONS}
+                optional={true}
                 label="Industry"
             />
         </FormControl>

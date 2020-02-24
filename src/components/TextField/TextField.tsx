@@ -15,11 +15,15 @@ const TextField: FC<ITextFieldProps> = (props) => {
         className,
         placeholder,
         label,
+        optional,
     } = props
 
     return (
         <Fragment>
-            <Label htmlFor={id || name} block={true}>{label}</Label>
+            <Label htmlFor={id || name} block={true}>
+                {label}
+                {optional && ' - optional'}
+            </Label>
             <StyledInput
                 id={id}
                 name={name}
